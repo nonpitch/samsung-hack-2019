@@ -1,0 +1,35 @@
+#print(front_is_clear())
+#print(left_is_clear())
+#print(right_is_clear())
+#print("-"*20)
+#turn_off()
+if on_beeper():
+    pick_beeper()
+    move()
+if carries_beepers():
+    put_beeper()
+    move()
+turn_off()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+#For Code
+def move_forward():
+    for i in range(9):
+        move()
+#move_forward()
+def move4side():
+    for i in range(4):
+        move_forward()
+        turn_left()
+
+move4side()
+turn_off()
+
+
+
+

@@ -1,0 +1,21 @@
+def stair ():
+    if front_is_clear():
+        move()
+    elif front_is_clear() == False:
+        turn_left()
+        move()
+        repeat(turn_left,3)
+repeat(stair,9)
+put_beeper()
+repeat(turn_left,2)
+move()
+def stair ():
+    if left_is_clear():
+        turn_left()
+        move()
+    elif front_is_clear()== False:
+        repeat(turn_left,3)
+        move()
+repeat(stair,8)
+turn_off()
+

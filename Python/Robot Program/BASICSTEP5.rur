@@ -1,0 +1,22 @@
+for j in range(5):
+    for i in range(5):
+        move()
+        while on_beeper():
+            pick_beeper()
+        if not(j%2==0):
+            if i!=4 :
+                put_beeper()
+        else : 
+                put_beeper()
+        if front_is_clear()== False and right_is_clear()== False :
+            break
+        if front_is_clear()== False and j%2 ==0:
+            repeat(turn_left,3)
+            move()
+            repeat(turn_left,3)
+        elif front_is_clear()== False and j%2 ==1:
+            turn_left()
+            move()
+            turn_left()
+turn_off()
+

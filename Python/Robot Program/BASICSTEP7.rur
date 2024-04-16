@@ -1,0 +1,231 @@
+from random import randint
+import time
+def turn_right():
+    repeat(turn_left,3)
+def turn_around():
+    repeat(turn_left,2)
+def frl():
+    global step, score, bad
+    if front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+def flr():
+    global step, score, bad
+    if front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1       
+    elif right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+            t0 = time.time()
+def rfl():
+    global step, score, bad
+    if right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1       
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+            t0 = time.time()
+def rlf():
+    global step, score, bad
+    if right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1 
+    elif front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+            t0 = time.time()
+def lrf():
+    global step, score, bad
+    if left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1 
+    elif right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+            t0 = time.time()
+def lfr():
+    global step, score, bad
+    if left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1 
+    elif front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+            t0 = time.time()
+step = 0
+score = 0
+bad = 0
+while True:
+    choice = randint(1,6)
+    if choice == 1:
+        frl()
+    elif choice == 2:
+        flr()    
+    elif choice == 3:
+        rfl()
+    elif choice == 4:
+        rlf()
+    elif choice == 5:
+        lrf()
+    elif choice == 6:
+        lfr()
+    if score>=69:
+        print("-"*50)
+        print("Step = %d"%(step*10))
+        print("Score = %d"%(score))
+        print("bad = %d"%(bad))
+        break 
+    else:
+        print("-"*50)
+        print("Step = %d"%(step*10))
+        print("Score = %d"%(score))
+        print("bad = %d"%(bad))
+turn_off()
+#Step = 307
+#Score = 68
+#bad = 17
+
+#Step = 333
+#Score = 69
+#bad = 13
+
+#Step = 4650
+#Score = 69
+#bad = 12

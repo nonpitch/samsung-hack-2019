@@ -1,0 +1,50 @@
+import time
+def turn_right():
+    repeat(turn_left,3)
+def turn_around():
+    repeat(turn_left,2)
+def frl():
+    global step, score, bad
+    if front_is_clear():
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif right_is_clear():
+        turn_right()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    elif left_is_clear():
+        turn_left()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper()
+            score +=1
+    else:
+        bad += 1
+        turn_around()
+        move()
+        step +=1
+        while on_beeper():
+            pick_beeper
+            score +=1
+t0 = time.time()
+step = 0
+score = 0
+bad = 0
+while True:
+    frl()
+
+    if step>20:
+        break 
+    else:
+        print("-"*50)
+        print("Step = %d"%(step))
+        print("Score = %d"%(score))
+        print("bad = %d"%(bad))
+turn_off()
